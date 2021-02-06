@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:controller="NewLooksController" prefHeight="400.0" prefWidth="769.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+  <columnConstraints>
+    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="411.0" minWidth="10.0" prefWidth="402.0" />
+    <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="367.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" GridPane.columnIndex="1">
+         <children>
+            <Label prefHeight="19.0" prefWidth="180.0" text="By users in room" textAlignment="CENTER" textFill="#5e65e4">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="393.0" prefWidth="201.0">
+               <content>
+                  <VBox fx:id="usersContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="285.0">
+                     <children>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+         <padding>
+            <Insets left="15.0" top="20.0" />
+         </padding>
+      </VBox>
+      <GridPane alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="367.0" minHeight="10.0" prefHeight="272.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="221.0" minHeight="10.0" prefHeight="128.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView onMouseClicked="#onChoose" fx:id="ownerAvatar" fitHeight="220.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label onMouseClicked="#onChoose" alignment="CENTER" prefHeight="30.0" prefWidth="400.0" text="Save your avatar" textFill="#5e65e4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<Tab xmlns:fx="http://javafx.com/fxml" fx:controller="TabCategoryController" fx:id="tab" style="-fx-padding: 0;">
+    <content>
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="446.0">
+            <content>
+                <FlowPane fx:id="flowPane" prefHeight="253.0" prefWidth="597.0" rowValignment="TOP">
+                    <children>
+                    <ImageView fx:id="addFigure" onMouseClicked="#onAddFigure" fitHeight="110.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@add_button.png" />
+                    </ImageView>
+
+                    </children>
+                </FlowPane>
+            </content>
+        </ScrollPane>
+    </content>
+    <graphic>
+        <Label text="+" fx:id="label">
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </Label>
+    </graphic>
+</Tab>

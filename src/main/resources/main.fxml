@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.TabPane?>
+
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<TabPane fx:id="tabs" fx:controller="Wardrobe" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml">
+  <tabs>
+    <Tab  style="-fx-padding: 0;">
+      <graphic>
+        <Label text="+" onMouseClicked="#newTab">
+          <cursor>
+            <Cursor fx:constant="HAND" />
+          </cursor>
+          <font>
+            <Font size="25.0" />
+          </font>
+          <padding>
+            <Insets left="5.0" right="5.0" />
+          </padding>
+        </Label>
+      </graphic>
+    </Tab>
+  </tabs>
+</TabPane>

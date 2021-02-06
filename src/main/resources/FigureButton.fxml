@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="vbox" alignment="CENTER" onMouseEntered="#onMouseEntered" onMouseExited="#onMouseExited" spacing="5.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="LookController">
+   <children>
+      <ImageView fx:id="lookImage" onMouseClicked="#onChangeLook" fitHeight="110.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView fx:id="deleteImage" onMouseClicked="#onDelete" fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@delete_icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</VBox>
